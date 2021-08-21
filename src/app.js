@@ -10,7 +10,8 @@ function calculateProfitAndLoss() {
     if (currentPriceValue > initialPriceValue) {
       var profit = (currentPriceValue - initialPriceValue) * quantityValue;
 
-      var profitPercentage = (profit / initialPriceValue) * 100;
+      var profitPercentage =
+        ((currentPriceValue - initialPriceValue) / initialPriceValue) * 100;
       setMessage(
         `Yay you made a profit of ${profit} and percentage is ${profitPercentage.toFixed(
           2
@@ -18,7 +19,8 @@ function calculateProfitAndLoss() {
       );
     } else if (initialPriceValue > currentPriceValue) {
       var loss = (initialPriceValue - currentPriceValue) * quantityValue;
-      var lossPercentage = (loss / currentPriceValue) * 100;
+      var lossPercentage =
+        ((initialPriceValue - currentPriceValue) / currentPriceValue) * 100;
       setMessage(
         `You lost ${loss} and percentage is ${lossPercentage.toFixed(2)}%.`
       );
