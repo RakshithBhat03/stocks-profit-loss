@@ -12,27 +12,39 @@ function calculateProfitAndLoss() {
 
       var profitPercentage =
         ((currentPriceValue - initialPriceValue) / initialPriceValue) * 100;
-      setMessage(
-        `Yay you made a profit of ${profit} and percentage is ${profitPercentage.toFixed(
-          2
-        )}%.`
-      );
+      var toFixed = profitPercentage.toFixed(2);
+      var message =
+        "Yay! you made a profit of <span style= color:var(--profit-color)>" +
+        profit +
+        "</span > and percentage is<span style= color:var(--profit-color)> " +
+        toFixed +
+        "%</span>.";
+      setMessage(message);
     } else if (initialPriceValue > currentPriceValue) {
       var loss = (initialPriceValue - currentPriceValue) * quantityValue;
       var lossPercentage =
         ((initialPriceValue - currentPriceValue) / currentPriceValue) * 100;
-      setMessage(
-        `You lost ${loss} and percentage is ${lossPercentage.toFixed(2)}%.`
-      );
+      var toFixed = lossPercentage.toFixed(2);
+      var message =
+        "You lost <span style= color:var(--alert-color)>" +
+        loss +
+        "</span > and percentage is <span style= color:var(--alert-color)>" +
+        lossPercentage +
+        "%</span>.";
+      setMessage(message);
     } else {
-      setMessage("No pain No gain!");
+      setMessage(
+        `No <span style=color:var(--alert-color);> pain</span> No <span style=color:var(--profit-color);>gain</span>!`
+      );
     }
   } else {
-    setMessage("Please enter all the fields!");
+    var message =
+      "<span style=color:var(--alert-color);>Please enter all the fields!</span>";
+    setMessage(message);
   }
 }
 function setMessage(message) {
-  output.innerText = message;
+  output.innerHTML = message;
 }
 var currentPrice = document.querySelector("#current-price");
 var initialPrice = document.querySelector("#initial-price");

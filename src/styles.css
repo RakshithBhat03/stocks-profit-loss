@@ -1,3 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+:root {
+  --color-background: #f3f4f6;
+  --border-color: #4b5563;
+  --alert-color: #ef4444;
+  --profit-color: #059669;
+}
 body {
   text-align: center;
+  border: 2px var(--border-color) solid;
+  max-width: 600px;
+  margin: 4rem auto;
+  background: #9796f0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fbc7d4,
+    #9796f0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fbc7d4,
+    #9796f0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Source Sans Pro", sans-serif;
+}
+.container {
+}
+.input-box {
+  display: block;
+  margin: 1rem auto 2rem auto;
+  padding: 0.5rem;
+  min-width: 18rem;
+  font-size: 1.2rem;
+  border: 2.5px var(--border-color) solid;
+}
+h1 {
+  margin: 3rem;
+  font-size: 3rem;
+}
+label {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+#submit-button {
+  margin: 1rem auto;
+  padding: 0.8rem 2rem;
+  font-size: 1.3rem;
+  border-radius: none;
+  border-color: var(--border-color);
+  background-color: transparent;
+}
+#submit-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+#output {
+  font-size: 2.5rem;
+  padding: 0.5rem;
 }
