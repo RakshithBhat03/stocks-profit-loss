@@ -7,7 +7,7 @@
 }
 body {
   text-align: center;
-  border: 2px var(--border-color) solid;
+  /* border: 2px var(--border-color) solid; */
   max-width: 600px;
   margin: 4rem auto;
   background: #9796f0; /* fallback for old browsers */
@@ -23,8 +23,7 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: "Source Sans Pro", sans-serif;
 }
-.container {
-}
+
 .input-box {
   display: block;
   margin: 1rem auto 2rem auto;
@@ -56,4 +55,33 @@ label {
 #output {
   font-size: 2.5rem;
   padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+.socials {
+  font-size: 2rem;
+}
+.list {
+  list-style: none;
+  text-align: center;
+  margin: 2.5rem auto;
+  margin-left: -40px;
+}
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+footer {
+  /* position: fixed; */
+  width: 100%;
+  left: 0;
+  margin: 0 auto;
+  bottom: 0;
+  margin-top: 6rem;
+}
+
+.list li {
+  display: inline;
+  margin: 0rem 0.5rem;
 }

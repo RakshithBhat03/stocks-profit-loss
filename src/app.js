@@ -29,7 +29,7 @@ function calculateProfitAndLoss() {
         "You lost <span style= color:var(--alert-color)>" +
         loss +
         "</span > and percentage is <span style= color:var(--alert-color)>" +
-        lossPercentage +
+        toFixed +
         "%</span>.";
       setMessage(message);
     } else {
