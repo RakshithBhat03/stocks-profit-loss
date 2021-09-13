@@ -2,11 +2,7 @@ function calculateProfitAndLoss() {
   var currentPriceValue = Number(currentPrice.value);
   var initialPriceValue = Number(initialPrice.value);
   var quantityValue = Number(quantity.value);
-  if (
-    currentPriceValue !== 0 &&
-    initialPriceValue !== 0 &&
-    quantityValue !== 0
-  ) {
+  if (currentPriceValue > 0 && initialPriceValue > 0 && quantityValue > 0) {
     if (currentPriceValue > initialPriceValue) {
       var profit = (currentPriceValue - initialPriceValue) * quantityValue;
 
@@ -39,7 +35,7 @@ function calculateProfitAndLoss() {
     }
   } else {
     var message =
-      "<span style=color:var(--alert-color);>Please enter all the fields!</span>";
+      "<span style=color:var(--alert-color);>Please enter all the fields with positive values!</span>";
     setMessage(message);
   }
 }
